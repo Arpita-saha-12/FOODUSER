@@ -13,6 +13,8 @@ export class Item1Component implements OnInit {
 
   public id = '';
   public items = [];
+  title = 'Custom Search';
+  searchText;
   public apiurl = 'http://localhost:3000';
   constructor(private route: ActivatedRoute, private router: Router, private iservice: ItemService, private sanitizer: DomSanitizer) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;

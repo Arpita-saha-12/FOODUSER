@@ -1,13 +1,11 @@
-export class Order {
+export class Orderevent {
     _id: string;
-    iname: string;
-    idesc: string;
+    eventname: string;
+    bdesc: string;
     cname: string;
     cemail: string;
     cphone: string;
     caddress: string;
-    quan: number;
-    price: number;
     date: string;
-    payment: string;
+    
 }

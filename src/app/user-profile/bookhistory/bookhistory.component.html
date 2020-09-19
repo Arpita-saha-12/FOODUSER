@@ -1,5 +1,6 @@
-<div class="viewcat" style="background-color: aquamarine; max-height: 300vh;">
+<div class="viewcat" style="background-color: aquamarine; max-height: 300vh;max-width: 300vh">
   <div class="container">
+    <br><br>
     <h2>View Order</h2>            
     <table class="table table-hover">
   
@@ -14,6 +15,7 @@
           <th>Customer Phone</th>
           <th>Customer Address</th>
           <th>Order Date</th>
+          <th>Payment</th>
         </tr>
       
         <tr *ngFor="let order of orders;let i = index">
@@ -27,10 +29,18 @@
           <td>{{order.cphone}}</td>
           <td>{{order.caddress}}</td>
           <td>{{order.date}}</td>
+          <td>{{order.payment}}</td>
       
           
         </tr>
+        <!-- <div class="form-group">
+          <input type="submit" class="form-control btn btn-success" id="inputdefault" value="ORDER NOW">
+        </div> -->
+        <!-- <div class="form-group">
+          <input type="submit" class="form-control btn btn-success" id="inputdefault">
+        </div> -->
         <router-outlet></router-outlet>
     </table>
+    
   </div>
   </div>

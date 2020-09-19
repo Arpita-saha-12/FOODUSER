@@ -1,9 +1,41 @@
+<!-- <br><br>
+<div style="text-align:center">
+<h2>View Item</h2></div>
+<br>
+<div style="text-align:left">
+<h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{title}}</h6>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input [(ngModel)]="searchText" placeholder="Enter Item Name/Description/Price" /></div>
+<p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{id}}
+</p>
+<div class="item">
+  <div class="row" >
+    <div class="column" *ngFor="let item of items | filter:searchText">
+      <div class="content">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img [src]="getSafeUrl(item.ipic)" alt="pic" height="200" width="200">
+        <h3 style="text-align:center;">{{item.iname}}</h3>
+        <p>{{item.idesc}}</p>
+        <h4>Price:{{item.iprice}}/-</h4>
+        <button class="btn btn-success" (click)="onBook(item._id)">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+   -->
+   <br><br>
+<div style="text-align:center">
+<h2>View Item</h2></div>
+<br>
+<div style="text-align:left">
+<h6>{{title}}</h6>
+  <input [(ngModel)]="searchText" placeholder="Enter Item Name/Description/Price" /></div>
 <p>
   {{id}}
 </p>
 <div class="item">
   <div class="row" >
-    <div class="column" *ngFor="let item of items">
+    <div class="column" *ngFor="let item of items | filter:searchText">
       <div class="content">
         <img [src]="getSafeUrl(item.ipic)" alt="pic" height="200" width="200">
         <h3 style="text-align:center;">{{item.iname}}</h3>
@@ -14,4 +46,3 @@
     </div>
   </div>
 </div>
-  
